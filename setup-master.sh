@@ -81,7 +81,7 @@ STAT=$?
 Stat $? "Initializing Kubernetes Cluster"
 
 mkdir -p $HOME/.kube
-sudo cp -i -f /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo cp -i -f /etc/kubernetes/admin.conf $HOME/.kube/config 
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 
