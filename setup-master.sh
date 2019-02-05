@@ -65,7 +65,8 @@ systemctl enable --now crio &>>$LOG
 
 echo 'net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
-net.bridge.bridge-nf-call-arptables = 1' > /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-arptables = 1
+net.ipv4.ip_forward = 1' > /etc/sysctl.d/k8s.conf
 sysctl --system &>> $LOG
 Stat $? "Updating Network Configuration" 
 
